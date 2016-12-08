@@ -4,9 +4,12 @@
     width = canvas.width,
     height = canvas.height;
   
-  function drawChar(font,char,x,y) {
-    var c = char.charCodeAt(0);
-    ctx.drawImage(font,(c-(Math.floor(c/16)*16))*8,Math.floor(c/16)*12,8,12,x,y,8,12);
+  function writeText(font,message,x,y) {
+    var c;
+    for (var i = 0;i<message.length;i++) {
+      c = char.charCodeAt(i);
+      ctx.drawImage(font,(c-(Math.floor(c/16)*16))*8,Math.floor(c/16)*12,8,12,(i*10)+x,y,8,12);
+    }
   }
   
   ctx.imageSmoothingEnabled = false;
