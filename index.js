@@ -1,4 +1,4 @@
-(function() {
+/*(function() {*/
   var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d"),
     width = canvas.width,
@@ -11,4 +11,6 @@
   
   ctx.imageSmoothingEnabled = false;
   ctx.clearRect(0,0,width,height);
-})()
+/*})()*/
+
+/* Exposing game envoriment */
