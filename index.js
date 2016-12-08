@@ -4,10 +4,10 @@
     width = canvas.width,
     height = canvas.height;
   
-  function writeText(font,message,x,y) {
+  function writeText(font,text,x,y) {
     var c;
     for (var i = 0;i<message.length;i++) {
-      c = char.charCodeAt(i);
+      c = text.charCodeAt(i);
       ctx.drawImage(font,(c-(Math.floor(c/16)*16))*8,Math.floor(c/16)*12,8,12,(i*10)+x,y,8,12);
     }
   }
